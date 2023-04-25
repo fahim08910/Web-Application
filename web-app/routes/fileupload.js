@@ -5,6 +5,7 @@ import path from 'path';
 import fs from 'fs';
 import authMiddleware from '../middleware/authMiddleware.js';
 import permissionMiddleware from '../middleware/permissionMiddleware.js';
+import { parse } from 'csv-parse';
 
 const router = express.Router();
 const uploadDir = path.join(process.cwd(), 'public', 'uploads');
@@ -42,31 +43,24 @@ router.post('/:id/photos', authMiddleware, permissionMiddleware, upload.single('
       return;
     }
 
-    // Save photo to database and update POI
-    const photoId = await addPhotoToPOI(poi, filePath, fileName);
+    const csvFilePath = path.join(uploadDir, 'photos.csv');
+    const photoIds = await addPhotosToDatabase(poiId, filePath, fileName, csvFilePath);
 
     res.status(201).json({
-      message: 'Photo uploaded successfully',
-      id: photoId,
-      poiId: poiId,
-      filePath: filePath,
-      fileName: fileName
+      message: 'Photos uploaded successfully',
+      photoIds: photoIds
     });
   } catch (error) {
-    console.error(`Error uploading photo: ${error.message}`);
-    res.status(500).send('Error uploading photo');
+    console.error(`Error uploading photos: ${error.message}`);
+    res.status(500).send('Error uploading photos');
   }
 });
 
-async function addPhotoToPOI(poi, filePath, fileName) {
-  // Save photo to database
-  const result = await db.query('INSERT INTO photos (poi_id, file_name) VALUES (?, ?)', poi.id, fileName);
-  const photoId = result.insertId;
+async function addPhotosToDatabase(poiId, filePath, fileName, csvFilePath) {
+  // Read data from the CSV file
+  const csvData = await fs.promises.readFile(csvFilePath, 'utf-8');
+  const records = parse(csvData, { columns: true });
 
-  // Update POI with photo
-  await db.query('UPDATE pointsofinterest SET photo_id = ? WHERE id = ?', photoId, poi.id);
-
-  return photoId;
 }
 
 export default router;

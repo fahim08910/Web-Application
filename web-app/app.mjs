@@ -28,7 +28,7 @@ app.use(session({
 app.use(authRouter);
 app.use(poiRouter);
 app.use(reviewRouter);
-app.use(fileUploadRouter);
+app.use('/fileupload', fileUploadRouter);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
