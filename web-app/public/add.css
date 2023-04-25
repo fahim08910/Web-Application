@@ -1,0 +1,101 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #fffff9;
+  }
+  
+  div {
+    margin: 30px auto;
+    max-width: 600px;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
+      0 1px 1px rgba(128, 128, 128, 0.155),
+      0 2.1px 2.1px rgba(128, 128, 128, 0.195),
+      0 4.4px 4.4px rgba(128, 128, 128, 0.241),
+      0 12px 12px rgba(128, 128, 128, 0.35);
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  form {
+    display: grid;
+    grid-gap: 8px;
+  }
+  
+  label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: -4px;
+  }
+  
+  
+  input[type="text"],
+  textarea {
+    padding: 8px;
+    font-size: 17px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f5f5f5;
+  }
+  
+  input[type="text"]:focus,
+  textarea:focus {
+    outline: none;
+    background-color: #e5e5e5;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0069d9;
+  }
+  
+  #message {
+    font-size: 18px;
+    color: #8fffb8;
+    margin-top: 1px;
+    margin-bottom: -1px;
+    text-decoration: bold;
+  }
+  
+  /* Style the submit button */
+    button[type="submit"] {
+      width: 100%;
+      
+      border-radius: 10px;
+      overflow: hidden;
+      background-image: linear-gradient(
+        120deg,
+        transparent,
+        var(--primary-color),
+        transparent
+      );
+      border: none;
+      color: rgb(255, 255, 255);
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.6s;
+    }
+    
+    button[type="submit"]:hover {
+      background: transparent;
+      box-shadow: 0 0 15px 8px hsla(204, 70%, 53%, 0.5);
+      background-image: linear-gradient(to bottom right, #6a11cb, #2575fc);
+      color: white;
+    }

@@ -1,0 +1,346 @@
+/* Set background color and font family */
+body {
+    background-color: #F7F9FA;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style container */
+  #container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 10px;
+  }
+  
+  /* Style left column */
+  #left-column {
+    width: 60%;
+    margin-right: 0px; /* Add margin between left and right columns */
+    margin-left: -120px;
+    flex-direction: column;
+  align-items: center;
+  }
+  
+  /* Style login form */
+#login-form {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Style login form on hover */
+#login-form:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  
+}
+
+/* Style login form on active */
+#login-form:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+  
+ /* Style search form */
+#search-form {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Style search form on hover */
+#search-form:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  
+}
+
+/* Style search form on active */
+#search-form:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#login-form {
+  font-size: 22px;
+}
+
+  /* Style add link */
+#add-link {
+  display: inline-block;
+  background-color: #5C5C5C;
+  font-size: 22px;
+  color: #FFFFFF;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Style add link on hover */
+#add-link:hover {
+  background-color: #ffffff;
+  color: #5C5C5C;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+/* Style add link on active */
+#add-link:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+  
+  /* Style results div */
+  #results {
+    color: #ff4b2b;
+    background-color: #FFFFFF;
+  }
+  
+  /* Style right column */
+  #right-column {
+    width: 40%;
+  }
+  
+  /* Style map div */
+  #map {
+    height: 600px;
+    border-radius: 10px;
+  }
+
+   /* Style for the POI name */
+h3 {
+    font-size: 24px;
+  }
+  
+/* Style for the POI description */
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+/* Style for the review form */
+#review-form {
+  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Style for the review input label */
+label {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+/* Style for the review input */
+textarea {
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 16px;
+  width: 100%;
+  max-width: 500px;
+  min-height: 100px;
+}
+
+
+
+input[type="submit"]:hover {
+  background-color: #FFFFFF;
+  color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation for review form */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input[type="submit"] {
+  display: inline-block;
+  padding: 8px 15px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #4c05ff, #2b64ff);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  
+  background-position: right center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+input[type="submit"]:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.recommend-button{
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #630cef, #4c81f4);
+  transition: all 0.4s ease-in-out;
+}
+  
+  .button {
+  position: relative;
+  padding: 20px 40px;
+  border-radius: 50px;
+  background-color: transparent;
+  color: #fff;
+  border: 3px solid #fff;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.button:hover::before {
+  opacity: 0.50;
+}
+
+.button:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.button:active {
+  transform: translateY(2px);
+}
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #ff416c, #ff4b2b);
+  transition: all 0.4s ease-in-out;
+}
+
+button:hover {
+  
+  background-position: right center;
+}
+
+
+  
+#login-form input[type="text"],
+#login-form input[type="password"],
+#search-form input[type="text"] {
+  font-size: 20px;
+  height: 29.5px;
+  border-radius: 5px;
+  border: 2px solid rgb(0, 0, 0);
+  
+}
+#error-message {
+  display: block;
+  color: red;
+  font-size: 16px;
+  margin-top: -20px;
+  margin-bottom: 5px;
+  width: 500px; 
+}
+#error {
+  color: red;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+#review-message{
+  color: #ff4b2b;
+}
+#review-input{
+  margin-bottom: -30px;
+}
+
+#confirm {
+  position: absolute;
+  top: 50%;
+  left: 78%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 1px solid black;
+  padding: 10px;
+  z-index: 999;
+}
+#login-prompt {
+  position: absolute;
+  top: 50%;
+  left: 78%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 1px solid black;
+  padding: 10px;
+  z-index: 999;
+}
+#addpoi {
+  position: absolute;
+  top: 50%;
+  left: 78%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 1px solid black;
+  padding: 10px;
+  z-index: 999;
+}
+#descriptionInput{
+  width: 300px;
+  height: 10px;
+}
+.success-message {
+  display: inline;
+  color: green;
+  margin-left: 10px;
+}
